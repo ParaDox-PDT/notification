@@ -17,7 +17,7 @@ class _RegisterPageState extends State<RegisterPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          NotificationService.instance.showNotification();
+          NotificationService.instance.showNotificatoinOnPeriod();
         },
       ),
     );
