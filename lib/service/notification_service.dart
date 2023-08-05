@@ -40,12 +40,16 @@ class NotificationService {
       'Flutter N8',
       'Darsga kelmaganlar o\'zidan ko\'rsin',
       const NotificationDetails(
-        android: AndroidNotificationDetails(
-          'Nimadur',
-          'Nimadurde',
-          importance: Importance.low,
-          priority: Priority.low,
-        ),
+        android: AndroidNotificationDetails('Nimadur', 'Nimadurde',
+            importance: Importance.high,
+            priority: Priority.max,
+            fullScreenIntent: true,
+            audioAttributesUsage: AudioAttributesUsage.alarm,
+            actions: [
+              AndroidNotificationAction('1', 'Salom', inputs: [
+                AndroidNotificationActionInput(),
+              ]),
+            ]),
       ),
     );
   }
